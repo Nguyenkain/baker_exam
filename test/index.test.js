@@ -25,3 +25,24 @@ describe('Testing 14 MB11', () => {
         );
     });
 });
+
+describe('Testing 10 VS5', () => {
+    test('10 VS5', () => {
+        expect(packageDevide([3, 5], 10)).toEqual(
+            expect.arrayContaining([
+                expect.objectContaining({"number": 2, "pack": 5})
+            ])
+        );
+    });
+});
+
+describe('Testing 21 VS5', () => {
+    test('21 VS5', () => {
+        expect(packageDevide([3, 5], 21)).toEqual(
+            expect.arrayContaining([
+                expect.objectContaining({"number": 3, "pack": 5}),
+                expect.objectContaining({"number": 2, "pack": 3})
+            ])
+        );
+    });
+});
