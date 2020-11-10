@@ -48,7 +48,6 @@ const devideLogics = (packs, idx, amount, cnt) => {
     if (amount == 0) {
         res = Math.min(res, cnt);
         arrResult = arrCurrent.map(x => x);
-        arrResult = [];
         return;
     }
     if (idx == packs.length) {
