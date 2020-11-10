@@ -69,6 +69,10 @@ prompt.get(['input'], function (err, result) {
     const inputArr = result.input.split(' ');
     let code = inputArr[1];
     let number = inputArr[0];
+    if(price[code] == undefined) {
+        console.log(`Please enter the correct format`);
+        return ;
+    }
     let packs = Object.keys(price[code]);
     let amount = inputArr[0];
     let totalPrice = 0;
