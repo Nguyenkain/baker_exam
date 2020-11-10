@@ -71,8 +71,7 @@ prompt.get(['input'], function (err, result) {
     let packs = Object.keys(price[code]);
     let amount = inputArr[0];
     let totalPrice = 0;
-    console.log(packageDevide(packs, amount))
-    console.log(arrResult);
+    let step = packageDevide(packs, amount);
     arrResult.forEach(function (item) {
         totalPrice += price[code][item.pack] * item.number;
     });
