@@ -19,7 +19,8 @@ const packageDevide = (packs, amount) => {
     packs.sort((a, b) => b - a);
     res = Number.MAX_VALUE;
     devideLogics(packs, 0, amount, 0);
-    return res == Number.MAX_VALUE ? -1 : res;
+    res == Number.MAX_VALUE ? -1 : res;
+    return arrResult;
 };
 
 /**
@@ -71,7 +72,7 @@ prompt.get(['input'], function (err, result) {
     let packs = Object.keys(price[code]);
     let amount = inputArr[0];
     let totalPrice = 0;
-    let step = packageDevide(packs, amount);
+    let arrResult = packageDevide(packs, amount);
     arrResult.forEach(function (item) {
         totalPrice += price[code][item.pack] * item.number;
     });
@@ -82,3 +83,4 @@ prompt.get(['input'], function (err, result) {
         }
     });
 });
+module.exports = packageDevide;
