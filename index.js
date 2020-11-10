@@ -29,7 +29,7 @@ const packageDevide = (packs, amount) => {
  */
 const pushToArray = (packs, number) => {
     let a = arrCurrent.findIndex(x => x.pack == packs);
-    if(a >= 0) {
+    if(a >= 0) { //Check if current array has this item or not, if has, update the number amount
         arrCurrent[a] = {pack: packs, number: number}
     } else {
         arrCurrent.push({pack: packs, number: number});
